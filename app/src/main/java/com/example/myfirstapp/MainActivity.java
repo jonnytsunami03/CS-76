@@ -1,6 +1,7 @@
 package com.example.myfirstapp;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +21,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //Button Code
+        final Button button = findViewById(R.id.btnClickMe);
+        button.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                System.out.println("Button Clicked");
+            }
+        });
+
+        }
+
     }
-    public void updateText(View view) {
-        textView.setText("Clicked Button!");
-        System.out.println("Clicked Button!");
-}
